@@ -54,9 +54,7 @@
 
 ## 一键安装
 
-将下面命令中的 `YOUR_GITHUB_USERNAME` 替换成你的 GitHub 用户名：
-
-    bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/gongyi/main/install.sh)
+    bash <(curl -fsSL https://raw.githubusercontent.com/xiedonge/gongyi/main/install.sh)
 
 安装完成后，执行：
 
@@ -71,7 +69,7 @@
 
 ## 卸载
 
-    bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/gongyi/main/uninstall.sh)
+    bash <(curl -fsSL https://raw.githubusercontent.com/xiedonge/gongyi/main/uninstall.sh)
 
 ---
 
@@ -193,151 +191,6 @@
 - `README.md`：项目说明文档
 - `.gitignore`：Git 忽略规则
 - `LICENSE`：开源许可证
-
----
-
-## 部署步骤
-
-下面是完整的 GitHub 部署流程。
-
-### 1. 本地创建项目目录
-
-    mkdir gongyi
-    cd gongyi
-
-将以下文件放入该目录：
-
-- `gongyi`
-- `install.sh`
-- `uninstall.sh`
-- `README.md`
-
-建议同时补充：
-
-- `.gitignore`
-- `LICENSE`
-
----
-
-### 2. 设置脚本可执行权限
-
-    chmod +x gongyi install.sh uninstall.sh
-
----
-
-### 3. 初始化 Git 仓库
-
-    git init
-
----
-
-### 4. 添加文件并提交
-
-    git add .
-    git commit -m "init gongyi"
-
----
-
-### 5. 在 GitHub 创建仓库
-
-在 GitHub 上新建一个仓库，例如：
-
-- 仓库名：`gongyi`
-
-假设你的 GitHub 用户名为：
-
-- `YOUR_GITHUB_USERNAME`
-
-那么仓库地址通常为：
-
-    https://github.com/YOUR_GITHUB_USERNAME/gongyi
-
----
-
-### 6. 关联远程仓库
-
-如果你使用 SSH：
-
-    git branch -M main
-    git remote add origin git@github.com:YOUR_GITHUB_USERNAME/gongyi.git
-
-如果你使用 HTTPS：
-
-    git branch -M main
-    git remote add origin https://github.com/YOUR_GITHUB_USERNAME/gongyi.git
-
----
-
-### 7. 推送到 GitHub
-
-    git push -u origin main
-
----
-
-### 8. 验证 Raw 地址是否可访问
-
-上传成功后，检查以下地址是否能正常访问：
-
-#### install.sh
-
-    https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/gongyi/main/install.sh
-
-#### uninstall.sh
-
-    https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/gongyi/main/uninstall.sh
-
-#### gongyi
-
-    https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/gongyi/main/gongyi
-
-你可以在浏览器中打开，也可以命令行测试：
-
-    curl -fsSL https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/gongyi/main/install.sh | head
-
-如果能看到脚本内容，说明部署成功。
-
----
-
-### 9. 测试一键安装
-
-在本机或另一台 Linux 机器执行：
-
-    bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/gongyi/main/install.sh)
-
-安装完成后执行：
-
-    gongyi
-
----
-
-### 10. 测试卸载
-
-    bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/gongyi/main/uninstall.sh)
-
----
-
-## 本地开发调试
-
-如果你不想每次都重新安装，可以直接本地运行：
-
-    bash ./gongyi
-
-或者：
-
-    chmod +x ./gongyi
-    ./gongyi
-
----
-
-## 更新项目后的发布流程
-
-当你修改脚本内容后，执行：
-
-    git add .
-    git commit -m "update gongyi"
-    git push
-
-推送成功后，GitHub Raw 地址会自动更新。
 
 ---
 
