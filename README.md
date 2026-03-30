@@ -1,5 +1,7 @@
 # gongyi
 
+待办：openclaw的结构还未解析
+
 一个用于 Linux 环境下管理“公益站”并快速切换 Codex / OpenClaw 配置的交互式命令行工具。
 
 安装完成后，直接执行：
